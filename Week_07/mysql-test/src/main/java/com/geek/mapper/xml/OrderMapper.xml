@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.geek.mapper.OrderMapper">
+
+    <update id="loadData" parameterType="string">
+        LOAD DATA LOCAL INFILE #{filePath}
+         INTO TABLE mysql_test.`t_order` CHARACTER SET utf8 FIELDS TERMINATED BY ','
+         (`order_id`, `user_id`, `goods_id`, `money`, `status`,create_time)
+    </update>
+
+</mapper>
