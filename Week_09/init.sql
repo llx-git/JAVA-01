@@ -12,8 +12,8 @@ CREATE TABLE `account` (
 
 /*Data for the table `account` */
 
-insert  into `account`(`account_id`,`user_id`,`money_usd`,`money_cny`) values (1,1,9,17);
-insert  into `account`(`account_id`,`user_id`,`money_usd`,`money_cny`) values (2,2,11,3);
+insert  into `account`(`account_id`,`user_id`,`money_usd`,`money_cny`) values (1,1,10,10);
+insert  into `account`(`account_id`,`user_id`,`money_usd`,`money_cny`) values (2,2,10,10);
 
 /*Table structure for table `freeze_account` */
 
@@ -24,4 +24,4 @@ CREATE TABLE `freeze_account` (
   `money_cny` double DEFAULT NULL,
   `is_deleted` tinyint(1) DEFAULT '0',
   PRIMARY KEY (`freeze_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
