@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.luolx.mapper.FreezeAccountMapper">
+
+    <update id="subMoneyUsd" parameterType="integer">
+		UPDATE hmily.`account` t SET t.`money_usd` = t.`money_usd` - 1 WHERE t.`user_id` = #{userId}
+	</update>
+
+    <update id="addMoneyCny" parameterType="integer">
+		UPDATE hmily.`account` t SET t.`money_cny` = t.`money_cny` + 7 WHERE t.`user_id` = #{userId}
+	</update>
+
+    <update id="subMoneyCny" parameterType="integer">
+		UPDATE hmily.`account` t SET t.`money_cny` = t.`money_cny` - 7 WHERE t.`user_id` = #{userId}
+	</update>
+
+    <update id="addMoneyUsd" parameterType="integer">
+		UPDATE hmily.`account` t SET t.`money_usd` = t.`money_usd` + 1 WHERE t.`user_id` = #{userId}
+	</update>
+</mapper>

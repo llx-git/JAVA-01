@@ -1,0 +1,19 @@
+server:
+  port: 8089
+
+spring:
+  application:
+    name: dubbo-hmily-comsumer
+
+dubbo:
+  scan:
+    base-packages: com.luolx
+  registry:
+    address: zookeeper://39.108.48.239:2181
+#    timeout: 20000
+  metadata-report:
+    address: zookeeper://39.108.48.239:2181
+hmily:
+  support:
+    rpc:
+      annotation: true

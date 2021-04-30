@@ -1,0 +1,42 @@
+server:
+  port: 8088
+
+spring:
+  application:
+    name: dubbo-hmily-provider
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://39.108.48.239:3306/hmily?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8
+    username: root
+    password: 123456
+
+mybatis-plus:
+  log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: classpath*:com/luolx/**/*.xml
+
+logging:
+  level:
+    com.luolx: info
+  file:
+    path: ./logs
+
+dubbo:
+  scan:
+    base-packages: com.luolx
+  protocol:
+    name: dubbo
+    port: 12345
+  registry:
+    address: zookeeper://39.108.48.239:2181
+    timeout: 20000
+  metadata-report:
+    address: zookeeper://39.108.48.239:2181
+  application:
+    qosEnable: true
+    qosPort: 22222
+    qosAcceptForeignIp: true
+    qos-enable-compatible: true
+    qos-host-compatible: 39.108.48.239
+    qos-port-compatible: 22222
+    qos-accept-foreign-ip-compatible: true
+    qos-host: 39.108.48.239
